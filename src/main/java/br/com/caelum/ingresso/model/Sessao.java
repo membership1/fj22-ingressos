@@ -18,10 +18,6 @@ public class Sessao {
 	private Integer id;
 	private LocalTime horario;
 	
-	private BigDecimal preco;
-	
-	
-
 	@ManyToOne
 	private Filme filme;
 
@@ -49,6 +45,15 @@ public class Sessao {
 	public void setSala(Sala sala) {
 		this.sala = sala;
 	}
+	
+	public BigDecimal getPreco() {
+		return preco;
+	}
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+	private BigDecimal preco;
+	
 	@ManyToOne
 	private Sala sala;
 
